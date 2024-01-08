@@ -26,8 +26,8 @@ GraphMAE is a generative self-supervised graph learning method, which achieves c
 **Supported datasets**:
 
 * Stage I: Pre-training on unlabeled molecular structures :  `ic50`
-* Stage II: Pre-training on labeled but noisy pharmacokinetic data.  'CL', 'Vdss' and 'T1_2'
-* Stage III: Physical formula enhanced multi-task learning : 'PK_Mol'
+* Stage II: Pre-training on labeled but noisy pharmacokinetic data.   `CL `,  `Vdss ` and  `T1_2 `
+* Stage III: Physical formula enhanced multi-task learning :  `PK_Mol `
 
 **Stage I**
 python chem/pretraining.py
