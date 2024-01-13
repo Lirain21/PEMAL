@@ -4,14 +4,6 @@
 pharmacokinetics prediction </h1>
 
 
-Implementation for arXiv:  [GraphMAE: Self-Supervised Masked Graph Autoencoders](https://arxiv.org/abs/2205.10803).
-
-
-GraphMAE is a generative self-supervised graph learning method, which achieves competitive or better performance than existing contrastive methods on tasks including *node classification*, *graph classification*, and *molecular property prediction*.
-
-
-
-
 <h2>Dependencies </h2>
 
 * Python >= 3.7
