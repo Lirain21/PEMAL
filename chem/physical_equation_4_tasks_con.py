@@ -129,7 +129,7 @@ def train(args, vdss_model, t1_2_model, cl_model,  para_loss, para_function_cl_v
         loss_t1_2 = criterion(t1_2_pred_log, t1_2_y)
         
         loss_k3 = criterion(torch.log(k_3 * vdss_pred), torch.log(t1_2_pred * cl_pred))
-        loss = 4 * loss_auc + loss_cl + loss_vdss + loss_t1_2 + loss_k3
+        loss =  loss_auc + loss_cl + loss_vdss + loss_t1_2 + loss_k3
        
         total_loss += loss.item()
         
