@@ -118,10 +118,10 @@ def train(args, vdss_model, t1_2_model, cl_model,  para_loss, para_function_cl_v
         auc_pred = k_1/cl_pred 
         auc_pred_log = torch.log(auc_pred)
         
-        auc_y = batch.auc_y.reshape(batch.auc_y.size(0), 1)
-        cl_y = batch.cl_y.reshape(batch.cl_y.size(0), 1)
-        vdss_y = batch.vdss_y.reshape(batch.vdss_y.size(0), 1)
-        t1_2_y = batch.t1_2_y.reshape(batch.t1_2_y.size(0), 1)
+        auc_y = batch.auc_y.view(batch.auc_y.size(0), 1)
+        cl_y = batch.cl_y.view(batch.cl_y.size(0), 1)
+        vdss_y = batch.vdss_y.view(batch.vdss_y.size(0), 1)
+        t1_2_y = batch.t1_2_y.view(batch.t1_2_y.size(0), 1)
         
         loss_auc = criterion(auc_pred_log, auc_y)
         loss_cl = criterion(cl_pred_log, cl_y)
@@ -191,10 +191,10 @@ def eval(args, vdss_model, t1_2_model, cl_model, para_loss, para_function_cl_vds
             
             auc_pred_log = torch.log(k_1/cl_pred)
             
-            auc_y = batch.auc_y.reshape(batch.auc_y.size(0), 1)
-            cl_y = batch.cl_y.reshape(batch.cl_y.size(0), 1)
-            vdss_y = batch.vdss_y.reshape(batch.vdss_y.size(0), 1)
-            t1_2_y = batch.t1_2_y.reshape(batch.t1_2_y.size(0), 1)
+            auc_y = batch.auc_y.view(batch.auc_y.size(0), 1)
+            cl_y = batch.cl_y.view(batch.cl_y.size(0), 1)
+            vdss_y = batch.vdss_y.view(batch.vdss_y.size(0), 1)
+            t1_2_y = batch.t1_2_y.view(batch.t1_2_y.size(0), 1)
             
             y_scores_auc.append(auc_pred_log)
             y_scores_cl.append(cl_pred_log)
